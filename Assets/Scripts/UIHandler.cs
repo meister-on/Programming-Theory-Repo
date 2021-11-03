@@ -1,0 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
+
+public class UIHandler : MonoBehaviour
+{
+    public TMP_Dropdown flowerName1;
+    public TMP_Dropdown flowerName2;
+    public TMP_Dropdown flowerName3;
+    private Button startButton;
+    void Start()
+    {
+        //Initialisation
+        startButton = GetComponentInChildren<Button>();
+        flowerName1.value = 0;
+        flowerName2.value = 0;
+        flowerName3.value = 0;
+        //Add listener for when the selected flower changes
+        flowerName1.onValueChanged.AddListener(delegate {
+            GetFlower1();
+        });
+        flowerName2.onValueChanged.AddListener(delegate {
+            GetFlower2();
+        });
+        flowerName3.onValueChanged.AddListener(delegate {
+            GetFlower3();
+        });
+        //Add Listener for Starting the game
+        startButton.onClick.AddListener(StartGame);
+    }
+
+    // Update is called once per frame
+    
+    void GetFlower1()
+    {
+        GameManager.Instance.flower1 = flowerName1.GetComponentInChildren<TMP_Text>().text.ToString();  
+    }
+    void GetFlower2()
+    {
+        GameManager.Instance.flower2 = flowerName2.GetComponentInChildren<TMP_Text>().text.ToString();
+
+    }
+    void GetFlower3()
+    {
+        GameManager.Instance.flower3 = flowerName3.GetComponentInChildren<TMP_Text>().text.ToString();
+    }
+    void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+}
