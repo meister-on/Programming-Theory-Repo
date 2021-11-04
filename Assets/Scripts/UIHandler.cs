@@ -11,6 +11,7 @@ public class UIHandler : MonoBehaviour
     public TMP_Dropdown flowerName2;
     public TMP_Dropdown flowerName3;
     private Button startButton;
+    public  Button endButton;
     void Start()
     {
         //Initialisation
@@ -28,8 +29,9 @@ public class UIHandler : MonoBehaviour
         flowerName3.onValueChanged.AddListener(delegate {
             GetFlower3();
         });
-        //Add Listener for Starting the game
+        //Add Listener for Starting and ending the game
         startButton.onClick.AddListener(StartGame);
+        endButton.onClick.AddListener(EndGame);
     }
 
     // Update is called once per frame
@@ -50,6 +52,11 @@ public class UIHandler : MonoBehaviour
     void StartGame()
     {
         SceneManager.LoadScene(1);
+    }
+    void EndGame()
+    {
+        Application.OpenURL("https://hypnose-und-ablenkung.at");
+        Application.Quit();
     }
 
 }

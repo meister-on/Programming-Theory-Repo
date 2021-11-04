@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public string flower1 = "Rose";
-    public string flower2 = "Lilly";
+    public string flower2 = "Lily";
     public string flower3 = "Poppy";
     private void Awake()
     {
