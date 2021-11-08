@@ -3996,8 +3996,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flower1: Rose
-  flower2: Lilly
-  flower3: Poppy
+  flower2: Violet
+  flower3: Aconite
 --- !u!1 &1629353891
 GameObject:
   m_ObjectHideFlags: 0

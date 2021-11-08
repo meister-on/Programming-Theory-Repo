@@ -1,32 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public abstract class FlowerProperties : MonoBehaviour
 {
-    private GameObject flowerProperty;
-    private string m_flowerName;
-    public string flowerName
-    { get {
-            flowerName = m_flowerName;
-        }
-        set
-        {
-
-        } 
-    }
-    private void Start()
-    {
-        flowerProperty = GameObject.Find("Flower Property");
-    }
-    public void FlowerLifeDuration(float lifeTime)
-    { 
-        Destroy(gameObject, lifeTime);
-    }
-    public abstract string FlowerSpecificProperties();
-    public virtual void ContainerFlowerInfo()
+    
+    protected GameObject flowerProperty;
+    public abstract TMP_Text FlowerName();
+    public abstract TMP_Text FlowerSpecificProperties();
+   
+    public void FlowerContainerOn()
     {
         flowerProperty.SetActive(true);
     }
-    
+    public void FlowerContainerOff()
+    {
+        flowerProperty.SetActive(false);
+    }
+    public void FlowerLifeDuration(float lifeTime)
+    {
+        Destroy(gameObject, lifeTime);
+    }
+
 }

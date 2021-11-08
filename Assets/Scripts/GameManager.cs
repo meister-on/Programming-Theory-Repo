@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
-    public string flower1 = "Rose";
-    public string flower2 = "Lily";
-    public string flower3 = "Poppy";
+    public static GameManager Instance;
+    public string flower1;
+    public string flower2;
+    public string flower3;
     private void Awake()
     {
         if (Instance != null)

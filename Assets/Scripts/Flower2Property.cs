@@ -3,29 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Flower1Property : FlowerProperties
+public class Flower2Property : FlowerProperties
 {
-    public TMP_Text flower1Name;
-    public TMP_Text flower1Property;
-
+    public TMP_Text flower2Name;
+    public TMP_Text flower2Property;
     private void Awake()
     {
         flowerProperty = GameObject.Find("Flower Property");
     }
-    private void Start()
-    {
-        flowerProperty.SetActive(false);
-
-    }
+   
     public override TMP_Text FlowerName()
     {
-        flower1Name.text=GameManager.Instance.flower1;
-        return flower1Name;
+        flower2Name.text=GameManager.Instance.flower2;
+        return flower2Name;
     }
     public override TMP_Text FlowerSpecificProperties()
     {
-        flower1Property.text = "spezielle Eigenschaft von flower1";
-        return flower1Property;
+        flower2Property.text = "spezielle Eigenschaft von flower2";
+        return flower2Property;
     }
     private void OnMouseOver()
     {

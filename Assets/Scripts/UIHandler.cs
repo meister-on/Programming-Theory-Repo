@@ -34,7 +34,7 @@ public class UIHandler : MonoBehaviour
         endButton.onClick.AddListener(EndGame);
     }
 
-    // Update is called once per frame
+  
     
     void GetFlower1()
     {

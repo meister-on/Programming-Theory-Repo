@@ -272,7 +272,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &71606292
 RectTransform:
   m_ObjectHideFlags: 0
@@ -846,6 +846,7 @@ GameObject:
   - component: {fileID: 603556671}
   - component: {fileID: 603556670}
   - component: {fileID: 603556674}
+  - component: {fileID: 603556675}
   m_Layer: 0
   m_Name: Flower3
   m_TagString: Untagged
@@ -959,6 +960,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraZDistance: 0
+--- !u!114 &603556675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603556668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0648460565e035b47b56363c4320b173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flower3Name: {fileID: 2120034321}
+  flower3Property: {fileID: 2026406272}
 --- !u!1 &667881281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,6 +1215,7 @@ GameObject:
   - component: {fileID: 760030603}
   - component: {fileID: 760030602}
   - component: {fileID: 760030606}
+  - component: {fileID: 760030607}
   m_Layer: 0
   m_Name: Flower1
   m_TagString: Untagged
@@ -1313,6 +1329,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraZDistance: 0
+--- !u!114 &760030607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760030600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae438479fb7bf9049bcecbcd0eae777c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flower1Name: {fileID: 2120034321}
+  flower1Property: {fileID: 2026406272}
 --- !u!1 &909168397
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,6 +1556,7 @@ GameObject:
   - component: {fileID: 1064771411}
   - component: {fileID: 1064771410}
   - component: {fileID: 1064771414}
+  - component: {fileID: 1064771415}
   m_Layer: 0
   m_Name: Flower2
   m_TagString: Untagged
@@ -1639,6 +1670,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraZDistance: 0
+--- !u!114 &1064771415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064771408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6134e1c34429c334bb62b22f006d0a3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flower2Name: {fileID: 2120034321}
+  flower2Property: {fileID: 2026406272}
 --- !u!1 &1265460760
 GameObject:
   m_ObjectHideFlags: 0
