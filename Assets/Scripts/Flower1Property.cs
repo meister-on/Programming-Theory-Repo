@@ -12,10 +12,13 @@ public class Flower1Property : FlowerProperties
     {
         flowerProperty = GameObject.Find("Flower Property");
         InitDictionary();
+
     }
     private void Start()
     {
+       
         flowerProperty.SetActive(false);
+       
 
     }
     public override TMP_Text FlowerName()

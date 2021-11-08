@@ -11,8 +11,13 @@ public class Flower2Property : FlowerProperties
     {
         flowerProperty = GameObject.Find("Flower Property");
         InitDictionary();
+        
     }
-   
+    private void Start()
+    {
+        
+    }
+
     public override TMP_Text FlowerName()
     {
         flower2Name.text=GameManager.Instance.flower2;
