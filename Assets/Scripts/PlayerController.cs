@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnMouseUp()
     {
-       //activate gravity of flower
+       //activate gravity of flower when released
         gameObject.GetComponent<Rigidbody>().useGravity = true;
        
     }
@@ -22,13 +22,9 @@ public class PlayerController : MonoBehaviour
     private void OnMouseDrag()
     {
         //move flower with mousedrag
-        Debug.Log("x: " + Input.mousePosition.x + "  y: " + Input.mousePosition.y);
         Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraZDistance);
         Vector3 objectPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = objectPosition;
     }
-    private void OnMouseDown()
-    {
-        //display Information about the flower
-    }
+   
 }

@@ -11,6 +11,7 @@ public class Flower1Property : FlowerProperties
     private void Awake()
     {
         flowerProperty = GameObject.Find("Flower Property");
+        InitDictionary();
     }
     private void Start()
     {
@@ -24,7 +25,7 @@ public class Flower1Property : FlowerProperties
     }
     public override TMP_Text FlowerSpecificProperties()
     {
-        flower1Property.text = "spezielle Eigenschaft von flower1";
+        flower1Property.text = FlowerSpecifics(GameManager.Instance.flower1);
         return flower1Property;
     }
     private void OnMouseOver()

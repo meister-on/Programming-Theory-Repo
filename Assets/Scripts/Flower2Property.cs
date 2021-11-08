@@ -10,6 +10,7 @@ public class Flower2Property : FlowerProperties
     private void Awake()
     {
         flowerProperty = GameObject.Find("Flower Property");
+        InitDictionary();
     }
    
     public override TMP_Text FlowerName()
@@ -19,7 +20,7 @@ public class Flower2Property : FlowerProperties
     }
     public override TMP_Text FlowerSpecificProperties()
     {
-        flower2Property.text = "spezielle Eigenschaft von flower2";
+        flower2Property.text = FlowerSpecifics(GameManager.Instance.flower2);
         return flower2Property;
     }
     private void OnMouseOver()
