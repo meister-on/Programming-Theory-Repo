@@ -7,6 +7,8 @@ public class Spawner : MonoBehaviour
     public GameObject flower1Prefab;
     public GameObject flower2Prefab;
     public GameObject flower3Prefab;
+    private SpriteRenderer spriteR;
+    private Sprite[] sprites;
     private float range = 8;
     private void Awake()
     {
@@ -16,7 +18,14 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //SpawningFlower();
+        spriteR = gameObject.GetComponent<SpriteRenderer>();
+        sprites = Resources.LoadAll<Sprite>("FlowerSprites");
+        foreach(Sprite s in sprites)
+        {
+            Vector3 pos = new Vector3(Random.Range(-range, range), 1.68f, Random.Range(-range, range));
+            Instantiate(s, pos, transform.rotation);
+        }
+        
     }
 
     // Update is called once per frame
