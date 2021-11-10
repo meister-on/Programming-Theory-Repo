@@ -41,11 +41,17 @@ public abstract class FlowerProperties : MonoBehaviour
         flowerDictionary.Add("Dandelion", "Properties of Dandelion");
         flowerDictionary.Add("Poppy", "Properties of Poppy");
     }
+   
     public string FlowerSpecifics(string flower)
     {
         string flowerProperty= (string)flowerDictionary[flower];
         return flowerProperty;
        
+    }
+    public virtual void ChangeFlowerTexture(Texture flower)
+    {
+        MeshRenderer flowerMeshRenderer = GetComponent<MeshRenderer>();
+        flowerMeshRenderer.material.SetTexture("_MainTex",flower);
     }
 
 }

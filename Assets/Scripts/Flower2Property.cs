@@ -7,17 +7,17 @@ public class Flower2Property : FlowerProperties
 {
     public TMP_Text flower2Name;
     public TMP_Text flower2Property;
+    private Texture flowerTexture;
+
     private void Awake()
     {
         flowerProperty = GameObject.Find("Flower Property");
         InitDictionary();
-        
-    }
-    private void Start()
-    {
-        
-    }
+        flowerTexture = Resources.Load<Texture2D>("FlowerSprites/" + GameManager.Instance.flower2);
+        ChangeFlowerTexture(flowerTexture);
 
+    }
+ 
     public override TMP_Text FlowerName()
     {
         flower2Name.text=GameManager.Instance.flower2;

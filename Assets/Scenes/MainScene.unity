@@ -1106,6 +1106,19 @@ MonoBehaviour:
   flower1Prefab: {fileID: 1831244958}
   flower2Prefab: {fileID: 1842080607}
   flower3Prefab: {fileID: 2137643355}
+  flowers:
+  - {fileID: 7138011643334254356, guid: f0d51f0b3590cbf418cb676d40a1f0db, type: 3}
+  - {fileID: 6627199748796223038, guid: 6afcf81efc0f5f54698f7ba4a58b5a1a, type: 3}
+  - {fileID: 3413310897792547150, guid: 199f1d57033496d4ebffc66f32bf34eb, type: 3}
+  - {fileID: 6359994711448514417, guid: 211ef8b3f2d4e3b4ca4815c1c9b86292, type: 3}
+  - {fileID: 21330280756961710, guid: 7ef6f88fcbe1e8844a6ceb7dce421418, type: 3}
+  - {fileID: 3356127138068306018, guid: 06cb2c59a35a0c842bbd33ba513406ba, type: 3}
+  - {fileID: 7106488912601789118, guid: 0b92648976d3e304798dec257dd3e64e, type: 3}
+  - {fileID: 5390935585216014578, guid: f805369da06caf84791c5ddc31b6b68b, type: 3}
+  - {fileID: 535357417735125962, guid: 60d8568de735ddf4f9b881195b43ffe0, type: 3}
+  - {fileID: 827106022137267640, guid: a8ae07c6098830b46a071a288eb2e5a8, type: 3}
+  - {fileID: 36626714221914185, guid: 9ac239c0e530c634db057d52dc865571, type: 3}
+  - {fileID: 1522368475566948615, guid: 27211ac6a3e17f7418d5c413b83ca32a, type: 3}
 --- !u!4 &744888839
 Transform:
   m_ObjectHideFlags: 0
