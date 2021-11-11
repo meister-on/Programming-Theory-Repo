@@ -15,7 +15,11 @@ public abstract class FlowerProperties : MonoBehaviour
 
     public void FlowerContainerOn()
     {
-        flowerProperty.SetActive(true);
+        if(GameManager.Instance.isActive == true)
+        {
+            flowerProperty.SetActive(true);
+        }
+
     }
     public void FlowerContainerOff()
     {
