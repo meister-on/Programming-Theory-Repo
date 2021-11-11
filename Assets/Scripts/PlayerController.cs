@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.isActive = true;
+        winGame.SetActive(false);
+        looseGame.SetActive(false);
         //calculate the  world y-screen distance from the origin of the camera to the flower
         cameraZDistance = Camera.main.WorldToScreenPoint(transform.position).z;
     }

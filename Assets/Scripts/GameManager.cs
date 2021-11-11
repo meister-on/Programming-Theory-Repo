@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public bool isActive = false;
     public bool winGame = false;
     public bool looseGame = false;
+    public bool basket1IsFull = false;
+    public bool basket2IsFull = false;
+    public bool basket3IsFull = false;
     private void Awake()
     {
         if (Instance != null)

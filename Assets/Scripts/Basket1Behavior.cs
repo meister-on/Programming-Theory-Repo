@@ -19,6 +19,11 @@ public class Basket1Behavior : BasketBehavior
         if (collision.gameObject.CompareTag("Flower1")== true && gameObject.CompareTag("Flower1")==true)
         {
             flowerCountText.text= GameManager.Instance.flower1+": "+ FlowerCounter(ref flower1Count);
+            //ends game when all 3 baskets are full of the right flowers
+            if (flower1Count == 5)
+            {
+                GameManager.Instance.basket1IsFull = true;
+            }
             Destroy(collision.gameObject);
         }
        
