@@ -370,8 +370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.5, y: 48.5}
-  m_SizeDelta: {x: 661, y: 47}
+  m_AnchoredPosition: {x: 19.5, y: 66.55759}
+  m_SizeDelta: {x: 661, y: 60.8848}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72710379
 MonoBehaviour:
@@ -394,7 +394,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: You are gathering flowers for a wedding! Put each flower in the right basket
-    with your mouse ...
+    with a mouse drag ... move camera forward with up and down keys
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1604,7 +1604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 122}
+  m_AnchoredPosition: {x: 0, y: 147}
   m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578322265
@@ -4134,6 +4134,12 @@ MonoBehaviour:
   flower1: Rose
   flower2: Violet
   flower3: Aconite
+  isActive: 0
+  winGame: 0
+  looseGame: 0
+  basket1IsFull: 0
+  basket2IsFull: 0
+  basket3IsFull: 0
 --- !u!1 &1629353891
 GameObject:
   m_ObjectHideFlags: 0

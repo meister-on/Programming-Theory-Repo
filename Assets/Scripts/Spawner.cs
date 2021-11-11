@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour
     public GameObject flower3Prefab;
     public GameObject [] flowers;
     private float range = 8;
+    private float rangeZNorth = 181;
     private void Awake()
     {
        
@@ -27,30 +28,34 @@ public class Spawner : MonoBehaviour
         for (int i=0; i < 5; i++)
         {
            
-            Vector3 pos1 = new Vector3(Random.Range(-range, range), 1.68f, Random.Range(-range, range));
+            Vector3 pos1 = new Vector3(Random.Range(-range, range), 1.68f, Random.Range(-range, rangeZNorth));
             Instantiate(flower1Prefab, pos1, transform.rotation);
-            Vector3 pos2 = new Vector3(Random.Range(-range, range), 1.68f, Random.Range(-range, range));
+            Vector3 pos2 = new Vector3(Random.Range(-range, range), 1.68f, Random.Range(-range, rangeZNorth));
             Instantiate(flower2Prefab, pos2, transform.rotation);
-            Vector3 pos3 = new Vector3(Random.Range(-range, range), 1.68f, Random.Range(-range, range));
+            Vector3 pos3 = new Vector3(Random.Range(-range, range), 1.68f, Random.Range(-range, rangeZNorth));
             Instantiate(flower3Prefab, pos3, transform.rotation);
         }
        
     }
     void SpawningSprites()
     {
-        foreach (GameObject flower in flowers)
+        for(int i = 0; i < 5; i++)
         {
-            if (flower.name == GameManager.Instance.flower1 || flower.name == GameManager.Instance.flower2 || flower.name == GameManager.Instance.flower3)
+            foreach (GameObject flower in flowers)
             {
+                if (flower.name == GameManager.Instance.flower1 || flower.name == GameManager.Instance.flower2 || flower.name == GameManager.Instance.flower3)
+                {
+
+                }
+                else
+                {
+                    Vector3 pos = new Vector3(Random.Range(-range, range), 1.68f, Random.Range(-range, rangeZNorth));
+                    Instantiate(flower, pos, transform.rotation);
+                }
 
             }
-            else
-            {
-                Vector3 pos = new Vector3(Random.Range(-range, range), 1.68f, Random.Range(-range, range));
-                Instantiate(flower, pos, transform.rotation);
-            }
-
         }
+        
     }
     
 }
