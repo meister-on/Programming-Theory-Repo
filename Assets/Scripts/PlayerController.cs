@@ -9,16 +9,20 @@ public class PlayerController : MonoBehaviour
     public GameObject looseGame;
 
    
+
+   
     private void Start()
     {
         GameManager.Instance.isActive = true;
         winGame.SetActive(false);
         looseGame.SetActive(false);
+        
         //calculate the  world y-screen distance from the origin of the camera to the flower
         cameraZDistance = Camera.main.WorldToScreenPoint(transform.position).z;
     }
     private void Update()
     {
+       
         LooseGame();
     }
     private void OnMouseUp()
@@ -35,13 +39,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        //move flower with mousedrag
-        if(GameManager.Instance.isActive == true)
-        {
-            Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraZDistance);
-            Vector3 objectPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-            transform.position = objectPosition;
-        }
+        MoveFlower();
        
     }
     void LooseGame()
@@ -53,5 +51,16 @@ public class PlayerController : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    void MoveFlower()
+    {
+        //move flower with mousedrag
+        if (GameManager.Instance.isActive == true)
+        {
+            Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, cameraZDistance);
+            Vector3 objectPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+            transform.position = objectPosition;
+        }
+    }
+   
    
 }
