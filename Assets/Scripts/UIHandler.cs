@@ -14,6 +14,12 @@ public class UIHandler : MonoBehaviour
     public  Button endButton;
     void Start()
     {
+        //abstraction
+        FlowerInitialisation();
+    }
+
+    void FlowerInitialisation()
+    {
         //Initialisation
         startButton = GetComponentInChildren<Button>();
         flowerName1.value = 0;
@@ -34,20 +40,18 @@ public class UIHandler : MonoBehaviour
         endButton.onClick.AddListener(EndGame);
     }
 
-  
-    
     void GetFlower1()
     {
-        GameManager.Instance.flower1 = flowerName1.GetComponentInChildren<TMP_Text>().text.ToString();  
+        GameManager.Instance.flower1 = flowerName1.GetComponentInChildren<TMP_Text>().text;  
     }
     void GetFlower2()
     {
-        GameManager.Instance.flower2 = flowerName2.GetComponentInChildren<TMP_Text>().text.ToString();
+        GameManager.Instance.flower2 = flowerName2.GetComponentInChildren<TMP_Text>().text;
 
     }
     void GetFlower3()
     {
-        GameManager.Instance.flower3 = flowerName3.GetComponentInChildren<TMP_Text>().text.ToString();
+        GameManager.Instance.flower3 = flowerName3.GetComponentInChildren<TMP_Text>().text;
     }
     void StartGame()
     {
@@ -58,5 +62,6 @@ public class UIHandler : MonoBehaviour
         Application.OpenURL("https://hypnose-und-ablenkung.at");
         Application.Quit();
     }
+    
 
 }

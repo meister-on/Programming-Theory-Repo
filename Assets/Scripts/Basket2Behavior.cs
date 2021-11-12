@@ -19,14 +19,20 @@ public class Basket2Behavior : BasketBehavior
     {
         if (collision.gameObject.CompareTag("Flower2")== true && gameObject.CompareTag("Flower2")==true)
         {
-            flowerCountText.text = GameManager.Instance.flower2 + ": " + FlowerCounter(ref flower2Count);
-            //ends game when all 3 baskets are full of the right flowers
-            if (flower2Count == 5)
-            {
-                GameManager.Instance.basket2IsFull = true;
-            }
+            ShowTextAndCount();
             Destroy(collision.gameObject);
         }
        
+    }
+    void ShowTextAndCount()
+    {
+        //inheritance
+        flowerCountText.text = GameManager.Instance.flower2 + ": " + FlowerCounter(ref flower2Count);
+        //ends game when all 3 baskets are full of the right flowers
+        if (flower2Count == 5)
+        {
+            GameManager.Instance.basket2IsFull = true;
+        }
+
     }
 }

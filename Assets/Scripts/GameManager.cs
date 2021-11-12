@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    //encapsulation
+    public static GameManager Instance { get; private set; }
     public string flower1;
     public string flower2;
     public string flower3;

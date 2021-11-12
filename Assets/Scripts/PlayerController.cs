@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float cameraZDistance;
+    private float cameraZDistance;
     public GameObject winGame;
     public GameObject looseGame;
 
@@ -13,32 +13,24 @@ public class PlayerController : MonoBehaviour
    
     private void Start()
     {
-        GameManager.Instance.isActive = true;
-        winGame.SetActive(false);
-        looseGame.SetActive(false);
-        
-        //calculate the  world y-screen distance from the origin of the camera to the flower
-        cameraZDistance = Camera.main.WorldToScreenPoint(transform.position).z;
+        //abstraction
+        InitGamePlay();
     }
     private void Update()
     {
-       
+       //abstraction
         LooseGame();
     }
     private void OnMouseUp()
     {
-       //activate gravity of flower when released
-       if(GameManager.Instance.isActive == true)
-        {
-            gameObject.GetComponent<Rigidbody>().useGravity = true;
-            
-        }
-       
+        //abstraction
+        ActivateGravity();
        
     }
 
     private void OnMouseDrag()
     {
+        //abstraction
         MoveFlower();
        
     }
@@ -61,6 +53,25 @@ public class PlayerController : MonoBehaviour
             transform.position = objectPosition;
         }
     }
-   
-   
+    void ActivateGravity()
+    {
+        //activate gravity of flower when released
+        if (GameManager.Instance.isActive == true)
+        {
+            gameObject.GetComponent<Rigidbody>().useGravity = true;
+
+        }
+
+    }
+    void InitGamePlay()
+    {
+        GameManager.Instance.isActive = true;
+        winGame.SetActive(false);
+        looseGame.SetActive(false);
+
+        //calculate the  world y-screen distance from the origin of the camera to the flower
+        cameraZDistance = Camera.main.WorldToScreenPoint(transform.position).z;
+    }
+
+
 }

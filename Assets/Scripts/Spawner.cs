@@ -10,15 +10,18 @@ public class Spawner : MonoBehaviour
     public GameObject [] flowers;
     private float range = 8;
     private float rangeZNorth = 181;
+    
+
     private void Awake()
-    {
-       
+    { 
+        //abstraction
         SpawningFlower();
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        //abstraction
         SpawningSprites();
     }
 

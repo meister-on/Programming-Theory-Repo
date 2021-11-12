@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
+//inheritance
+//Base Class for Flower Properties
 public abstract class FlowerProperties : MonoBehaviour
 {
-    
+    //encapsulation
     protected GameObject flowerProperty;
+    //abstraction
+    //polymorphism
     public abstract TMP_Text FlowerName();
+    //abstraction
+    //polymorphism
     public abstract TMP_Text FlowerSpecificProperties();
+    //encapsulation
     protected Dictionary<string,string> flowerDictionary = new Dictionary<string, string>();
   
 
@@ -21,15 +27,18 @@ public abstract class FlowerProperties : MonoBehaviour
         }
 
     }
-    public void FlowerContainerOff()
+    //encapsulation
+    protected void FlowerContainerOff()
     {
         flowerProperty.SetActive(false);
     }
-    public void FlowerLifeDuration(float lifeTime)
+    //encapsulation
+    protected void FlowerLifeDuration(float lifeTime)
     {
         Destroy(gameObject, lifeTime);
     }
-    public void InitDictionary()
+    //encapsulation
+    protected void InitDictionary()
     {
         flowerDictionary.Clear();
         flowerDictionary.Add("Aconite", "Properties of Aconite");
@@ -45,14 +54,17 @@ public abstract class FlowerProperties : MonoBehaviour
         flowerDictionary.Add("Dandelion", "Properties of Dandelion");
         flowerDictionary.Add("Poppy", "Properties of Poppy");
     }
-   
-    public string FlowerSpecifics(string flower)
+    //encapsulation
+    //polymorphism
+    protected string FlowerSpecifics(string flower)
     {
         string flowerProperty= (string)flowerDictionary[flower];
         return flowerProperty;
        
     }
-    public virtual void ChangeFlowerTexture(Texture flower)
+    //polymorphism
+    //encapsulation
+    protected virtual void ChangeFlowerTexture(Texture flower)
     {
         MeshRenderer flowerMeshRenderer = GetComponent<MeshRenderer>();
         flowerMeshRenderer.material.SetTexture("_MainTex",flower);
