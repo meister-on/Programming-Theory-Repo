@@ -23,7 +23,12 @@ public class Basket1Behavior : BasketBehavior
             Destroy(collision.gameObject);
             //inheritance
             PlayFlowerDropSound();
-
+        }
+        if (!collision.gameObject.CompareTag("Flower1"))
+        {
+            //abstraction
+            ShowWarningText();
+            PlayFlowerWrongDropSound();
         }
     }
    void ShowTextAndCount()
@@ -36,6 +41,18 @@ public class Basket1Behavior : BasketBehavior
             GameManager.Instance.basket1IsFull = true;
         }
         
+    }
+    void ShowWarningText()
+    {
+        flower1Name.color = Color.red;
+        flower1Name.text = "this is not a " + GameManager.Instance.flower1 + "!";
+        StartCoroutine(TextTimer());
+    }
+    IEnumerator TextTimer()
+    {
+        yield return new WaitForSeconds(2f);
+        flower1Name.color = Color.white;
+        flower1Name.text = GameManager.Instance.flower1 + "-Basket";
     }
    
 }

@@ -7,9 +7,11 @@ using UnityEngine;
 public class BasketBehavior : MonoBehaviour
 {
     private AudioSource flowerDropSound;
+    private AudioSource flowerWrongDropSound;
     private void Awake()
     {
         flowerDropSound = GameObject.Find("FlowerDropSound").GetComponent<AudioSource>();
+        flowerWrongDropSound = GameObject.Find("FlowerWrongDropSound").GetComponent<AudioSource>();
     }
     protected int FlowerCounter(ref int flower)
     {
@@ -19,5 +21,9 @@ public class BasketBehavior : MonoBehaviour
     protected void PlayFlowerDropSound()
     {
         flowerDropSound.Play();
+    }
+    protected void PlayFlowerWrongDropSound()
+    {
+        flowerWrongDropSound.Play();
     }
 }
