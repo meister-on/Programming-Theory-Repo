@@ -19,8 +19,11 @@ public class Basket3Behavior : BasketBehavior
     {
         if (collision.gameObject.CompareTag("Flower3")== true && gameObject.CompareTag("Flower3")==true)
         {
+            //abstraction
             ShowTextAndCount();
             Destroy(collision.gameObject);
+            //inheritance
+            PlayFlowerDropSound();
         }
        
     }

@@ -21,6 +21,8 @@ public class Basket2Behavior : BasketBehavior
         {
             ShowTextAndCount();
             Destroy(collision.gameObject);
+            //inheritance
+            PlayFlowerDropSound();
         }
        
     }

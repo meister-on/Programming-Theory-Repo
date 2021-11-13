@@ -21,6 +21,8 @@ public class Basket1Behavior : BasketBehavior
             //abstraction
             ShowTextAndCount();
             Destroy(collision.gameObject);
+            //inheritance
+            PlayFlowerDropSound();
 
         }
     }
